@@ -6,15 +6,15 @@
 /*   By: carmenia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/18 22:46:06 by carmenia          #+#    #+#             */
-/*   Updated: 2017/11/19 20:02:03 by carmenia         ###   ########.fr       */
+/*   Updated: 2017/11/19 22:18:52 by carmenia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-<<<<<<< HEAD
 #include <string.h>
+#include <stdlib.h>
 
 void	*ft_memset(void *b, int c, size_t len);
 void	ft_bzero(void *s, size_t n);
@@ -45,11 +45,7 @@ int		ft_isalnum(int c);
 int		ft_isascii(int c);
 int		ft_isprint(int c);
 int		ft_toupper(int c);
-=======
-#include <unistd.h>
-#include <stdlib.h>
-
-void	*memset(void *s, int c, size_t n);
->>>>>>> 9b92e5916cea3eeee42ed74c2c0bde5504701518
+int		ft_tolower(int c);
+void	*ft_memalloc(size_t size);
 
 #endif

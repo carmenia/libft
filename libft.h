@@ -13,6 +13,7 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 
+<<<<<<< HEAD
 #include <string.h>
 
 void	*ft_memset(void *b, int c, size_t len);
@@ -44,5 +45,11 @@ int		ft_isalnum(int c);
 int		ft_isascii(int c);
 int		ft_isprint(int c);
 int		ft_toupper(int c);
+=======
+#include <unistd.h>
+#include <stdlib.h>
+
+void	*memset(void *s, int c, size_t n);
+>>>>>>> 9b92e5916cea3eeee42ed74c2c0bde5504701518
 
 #endif

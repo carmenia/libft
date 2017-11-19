@@ -6,7 +6,7 @@
 /*   By: carmenia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/19 13:52:38 by carmenia          #+#    #+#             */
-/*   Updated: 2017/11/19 13:53:39 by carmenia         ###   ########.fr       */
+/*   Updated: 2017/11/19 23:14:55 by carmenia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 #include "libft.h"
 
-void	*ft_memccpy(void *restrict dst, const void *restrict src, int c, size_t n)
+void	*ft_memccpy(void *des, const void *src, int c, size_t n)
 {
 
 }

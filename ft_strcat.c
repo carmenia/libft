@@ -6,7 +6,7 @@
 /*   By: carmenia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/19 15:00:09 by carmenia          #+#    #+#             */
-/*   Updated: 2017/11/19 15:52:12 by carmenia         ###   ########.fr       */
+/*   Updated: 2017/11/19 23:11:29 by carmenia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 #include "libft.h"
 
-char	*ft_strcat(char *restrict s1, const char *restrict s2)
+char	*ft_strcat(char *s1, const char *s2)
 {
 	size_t	i;
 	size_t	j;

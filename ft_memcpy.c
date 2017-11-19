@@ -6,17 +6,28 @@
 /*   By: carmenia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/19 13:50:09 by carmenia          #+#    #+#             */
-/*   Updated: 2017/11/19 13:52:19 by carmenia         ###   ########.fr       */
+/*   Updated: 2017/11/19 23:21:18 by carmenia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*The memcpy() function copies n bytes from memory area src to memory area dst.  If dst and src overlap, behavior is undefined.  Applications in which dst and src
- *      might overlap should use memmove(3) instead.
- *      Pourquoi "restrict x"?*/
+/*		 oui 
+ *		 est-ce qu'il faut vraiment retourner le des original?*/
 
 #include "libft.h"
 
-void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+void	*ft_memcpy(void *des, const void *src, size_t n)
 {
+	unsigned char	*des1;
+	unsigned char	*src1;
+	int				i;
 
+	des1 = (unsigned char *)des;
+	src1 = (unsigned char *)src;
+	i = 0;
+	while (i < n)
+	{
+		des1[i] = src1[i];
+		i++;
+	}
+	return (des)
 }

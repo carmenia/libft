@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: carmenia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,12 +10,23 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIIBFT_H
-# define LIBFT_H
-
-#include <unistd.h>
 #include <stdlib.h>
 
-void	*memset(void *s, int c, size_t n);
+/* problemes:
+ * c c'est un int, pas un byte
+ * recap sur les void * */
 
-#endif
+void	*memset(void *s, int c, size_t n)
+{
+	unsigned char *i;
+
+	i = (unsigned char *)s
+	if (n == 0)
+		return (s);
+	while (i < n)
+	{
+		s[i] = c;
+		i++;
+	}
+	return (s);
+}

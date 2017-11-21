@@ -6,15 +6,13 @@
 /*   By: carmenia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/19 14:38:00 by carmenia          #+#    #+#             */
-/*   Updated: 2017/11/19 15:00:17 by carmenia         ###   ########.fr       */
+/*   Updated: 2017/11/21 16:09:14 by carmenia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* oui */
-
 #include "libft.h"
 
-char	*ft_strcpy(char * dst, const char * src)
+char	*ft_strcpy(char *dst, const char *src)
 {
 	size_t	i;
 

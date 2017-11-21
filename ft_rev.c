@@ -1,33 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_rev.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: carmenia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/19 13:52:38 by carmenia          #+#    #+#             */
-/*   Updated: 2017/11/21 19:47:03 by carmenia         ###   ########.fr       */
+/*   Created: 2017/11/21 14:09:10 by carmenia          #+#    #+#             */
+/*   Updated: 2017/11/21 18:34:23 by carmenia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memccpy(void *des, const void *src, int c, size_t n)
+char	*ft_rev(char *str)
 {
-	int				i;
-	unsigned char	*des1;
-	unsigned char	*src1;
+	char	*temp;
+	int		j;
+	int		i;
 
-	des1 = (unsigned char *)des;
-	src1 = (unsigned char *)src;
+	temp = (char *)malloc(sizeof(char *) * (ft_strlen(str) + 1));
+	j = strlen(str) - 1;
 	i = 0;
-	while (src1[i] && n != 0)
+	while (j >= 0)
 	{
-		des1[i] = src1[i];
-		if (des1[i] == (unsigned char)c)
-			return (des + (i + 1));
+		temp[i] = str[j];
 		i++;
-		n--;
+		j--;
 	}
-	return (NULL);
+	temp[i] = '\0';
+	return (temp);
 }

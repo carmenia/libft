@@ -1,33 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: carmenia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/19 13:52:38 by carmenia          #+#    #+#             */
-/*   Updated: 2017/11/21 19:47:03 by carmenia         ###   ########.fr       */
+/*   Created: 2017/11/21 10:21:38 by carmenia          #+#    #+#             */
+/*   Updated: 2017/11/21 16:06:19 by carmenia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	*ft_memccpy(void *des, const void *src, int c, size_t n)
+int	ft_sqrt(int n)
 {
-	int				i;
-	unsigned char	*des1;
-	unsigned char	*src1;
+	int i;
 
-	des1 = (unsigned char *)des;
-	src1 = (unsigned char *)src;
 	i = 0;
-	while (src1[i] && n != 0)
+	while (i <= n / 2)
 	{
-		des1[i] = src1[i];
-		if (des1[i] == (unsigned char)c)
-			return (des + (i + 1));
+		if (i * i == n)
+			return (i);
 		i++;
-		n--;
 	}
-	return (NULL);
+	return (0);
 }

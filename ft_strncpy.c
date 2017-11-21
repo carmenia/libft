@@ -6,27 +6,25 @@
 /*   By: carmenia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/19 14:49:01 by carmenia          #+#    #+#             */
-/*   Updated: 2017/11/19 15:15:00 by carmenia         ###   ########.fr       */
+/*   Updated: 2017/11/21 16:23:03 by carmenia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* oui */
-
 #include "libft.h"
 
-char	*ft_strncpy(char * dst, const char * src, size_t len)
+char	*ft_strncpy(char *des, const char *src, size_t len)
 {
 	size_t	i;
 
 	i = 0;
 	while (src[i] && i < len)
 	{
-		dst[i] = src[i];
+		des[i] = src[i];
 		i++;
 	}
 	while (i < len)
 	{
-		dst[i] = '\0';
+		des[i] = '\0';
 		i++;
 	}
 	return (des);

@@ -6,29 +6,26 @@
 /*   By: carmenia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/19 13:56:28 by carmenia          #+#    #+#             */
-/*   Updated: 2017/11/19 22:51:45 by carmenia         ###   ########.fr       */
+/*   Updated: 2017/11/21 20:38:53 by carmenia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/* oui
- * qu'est-ce qu'il faut retourner? &s[i] ou &str[i]?*/
 
 #include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t	i;
-	unsigned char *str;
+	size_t			i;
+	unsigned char	*str;
 
 	i = 0;
-	if (s == NULL)
-		return (NULL);
+	if (c == '\0' && ft_strlen(s) < n)
+		return ((void *)&s[ft_strlen(s)]);
 	str = (unsigned char *)s;
-	while (str[i])
+	while (str[i] && i < n)
 	{
 		if ((unsigned char)c == str[i])
-			return (&s[i]);
+			return ((void *)&s[i]);
 		i++;
 	}
-	return(NULL);
+	return (NULL);
 }

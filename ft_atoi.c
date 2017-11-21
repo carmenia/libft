@@ -6,11 +6,9 @@
 /*   By: carmenia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/19 18:34:45 by carmenia          #+#    #+#             */
-/*   Updated: 2017/11/19 18:46:54 by carmenia         ###   ########.fr       */
+/*   Updated: 2017/11/21 15:56:28 by carmenia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/* oui */
 
 #include "libft.h"
 
@@ -29,6 +27,6 @@ int	ft_atoi(const char *str)
 		n = n * 10;
 		i++;
 	}
-	n = n/10;
+	n = n / 10;
 	return (n);
 }

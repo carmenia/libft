@@ -6,11 +6,9 @@
 /*   By: carmenia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/19 15:00:09 by carmenia          #+#    #+#             */
-/*   Updated: 2017/11/19 23:11:29 by carmenia         ###   ########.fr       */
+/*   Updated: 2017/11/21 16:06:57 by carmenia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/* oui */
 
 #include "libft.h"
 
@@ -30,5 +28,3 @@ char	*ft_strcat(char *s1, const char *s2)
 	s1[i] = '\0';
 	return (s1);
 }
-
-

@@ -6,12 +6,9 @@
 /*   By: carmenia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/19 13:54:14 by carmenia          #+#    #+#             */
-/*   Updated: 2017/11/20 00:06:18 by carmenia         ###   ########.fr       */
+/*   Updated: 2017/11/21 20:30:55 by carmenia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/* oui 
- * est-ce qu'il faut vraiment retourner le des original?*/
 
 #include "libft.h"
 
@@ -31,12 +28,10 @@ void	*ft_memmove(void *des, const void *src, size_t n)
 			des1[i] = src1[i];
 			i++;
 		}
-		des1[i] = '\0';
 	}
-	else 
+	else
 	{
-		des1[n] = '\0';
-		while(n-- > 0)
+		while (n-- > 0)
 			des1[n] = src1[n];
 	}
 	return (des);

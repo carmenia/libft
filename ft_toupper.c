@@ -6,18 +6,16 @@
 /*   By: carmenia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/19 20:02:18 by carmenia          #+#    #+#             */
-/*   Updated: 2017/11/19 20:07:11 by carmenia         ###   ########.fr       */
+/*   Updated: 2017/11/21 16:02:17 by carmenia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/* oui */
 
 #include "libft.h"
 
 int	ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
-		return (c - 32) 
+		return (c - 32);
 	else
 		return (c);
 }

@@ -6,24 +6,22 @@
 /*   By: carmenia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/19 14:08:00 by carmenia          #+#    #+#             */
-/*   Updated: 2017/11/19 14:36:52 by carmenia         ###   ########.fr       */
+/*   Updated: 2017/11/21 16:21:40 by carmenia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/* oui */
 
 #include "libft.h"
 
 char	*ft_strdup(const char *s1)
 {
-	int 	i;
+	int		i;
 	char	*des;
 
 	i = 0;
-	while (str[i])
+	while (s1[i])
 		i++;
 	des = (char *)malloc(sizeof(*s1) * (i + 1));
-	if (des = NULL)
+	if (des == NULL)
 		return (NULL);
 	i = 0;
 	while (s1[i])

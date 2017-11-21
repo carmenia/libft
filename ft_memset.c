@@ -6,7 +6,7 @@
 /*   By: carmenia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/19 13:42:19 by carmenia          #+#    #+#             */
-/*   Updated: 2017/11/19 22:42:02 by carmenia         ###   ########.fr       */
+/*   Updated: 2017/11/21 18:34:21 by carmenia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_memset(void *s, int c, size_t n)
 	unsigned char	*str;
 
 	i = 0;
-	str = (unsigned char)s;
+	str = (unsigned char *)s;
 	while (i < n)
 	{
 		str[i] = (unsigned char)c;

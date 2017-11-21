@@ -6,11 +6,9 @@
 /*   By: carmenia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/19 15:45:28 by carmenia          #+#    #+#             */
-/*   Updated: 2017/11/19 16:22:40 by carmenia         ###   ########.fr       */
+/*   Updated: 2017/11/21 16:08:43 by carmenia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/* oui */
 
 #include "libft.h"
 
@@ -23,7 +21,7 @@ int	ft_strcmp(const char *s1, const char *s2)
 	{
 		if (s1[i] == s2[i])
 			i++;
-		else 
+		else
 			return (s1[i] - s2[i]);
 	}
 	return (0);

@@ -6,12 +6,9 @@
 /*   By: carmenia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/19 13:50:09 by carmenia          #+#    #+#             */
-/*   Updated: 2017/11/19 23:21:18 by carmenia         ###   ########.fr       */
+/*   Updated: 2017/11/21 18:16:52 by carmenia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/*		 oui 
- *		 est-ce qu'il faut vraiment retourner le des original?*/
 
 #include "libft.h"
 
@@ -19,7 +16,7 @@ void	*ft_memcpy(void *des, const void *src, size_t n)
 {
 	unsigned char	*des1;
 	unsigned char	*src1;
-	int				i;
+	size_t			i;
 
 	des1 = (unsigned char *)des;
 	src1 = (unsigned char *)src;
@@ -29,5 +26,5 @@ void	*ft_memcpy(void *des, const void *src, size_t n)
 		des1[i] = src1[i];
 		i++;
 	}
-	return (des)
+	return (des);
 }

@@ -71,7 +71,7 @@ SRCS =	ft_atoi.c			\
 
 SRCO = $(SRCS:.c=.o)
 
-INCL = -I ./libft.h
+INCL = -I ./
 
 all: $(NAME)
 
@@ -80,7 +80,7 @@ $(NAME): $(SRCO)
 	ranlib $(NAME)
 
 %.o: %.c
-	gcc -Wall -Wextra -Werror -c $^
+	gcc -Wall -Wextra -Werror -c $(INCL) $^
 
 clean: 
 	rm -f $(SRCO)

@@ -6,7 +6,7 @@
 /*   By: carmenia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/21 14:09:10 by carmenia          #+#    #+#             */
-/*   Updated: 2017/11/21 18:34:23 by carmenia         ###   ########.fr       */
+/*   Updated: 2017/12/05 15:35:15 by carmenia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_rev(char *str)
 	int		i;
 
 	temp = (char *)malloc(sizeof(char *) * (ft_strlen(str) + 1));
-	j = strlen(str) - 1;
+	j = ft_strlen(str) - 1;
 	i = 0;
 	while (j >= 0)
 	{

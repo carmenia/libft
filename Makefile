@@ -67,20 +67,20 @@ SRCS =	ft_atoi.c			\
 		ft_lstiter.c		\
 		ft_lstmap.c			\
 
-
+.PHONY: all clean fclean re
 
 SRCO = $(SRCS:.c=.o)
 
 INCL = -I ./libft.h
 
-.PHONY: all clean fclean re
-
 all: $(NAME)
 
-$(NAME):
-	gcc -Wall -Wextra -Werror -c $(SRCS) -I $(INCL)
+$(NAME): $(SRCO)
 	ar rc $(NAME) $(SRCO)
 	ranlib $(NAME)
+
+%.o: %.c
+	gcc -Wall -Wextra -Werror -c $^
 
 clean: 
 	rm -f $(SRCO)

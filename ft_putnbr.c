@@ -6,13 +6,13 @@
 /*   By: carmenia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/23 17:56:43 by carmenia          #+#    #+#             */
-/*   Updated: 2017/11/23 17:57:19 by carmenia         ###   ########.fr       */
+/*   Updated: 2017/12/04 21:09:26 by carmenia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft."
+#include "libft.h"
 
 void	ft_putnbr(int n)
 {
-
+	ft_putnbr_fd(n, 1);
 }

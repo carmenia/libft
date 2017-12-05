@@ -6,7 +6,7 @@
 /*   By: carmenia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/23 18:06:00 by carmenia          #+#    #+#             */
-/*   Updated: 2017/11/23 18:06:43 by carmenia         ###   ########.fr       */
+/*   Updated: 2017/12/04 21:10:43 by carmenia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,15 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
+	long	i;
 
+	i = n;
+	if (i < 0)
+	{
+		ft_putchar_fd('-', fd);
+		i = -i;
+	}
+	if (i > 9)
+		ft_putnbr_fd(i / 10, fd);
+	ft_putchar_fd(i % 10 + 48, fd);
 }

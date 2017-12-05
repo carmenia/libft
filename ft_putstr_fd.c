@@ -6,7 +6,7 @@
 /*   By: carmenia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/23 17:59:47 by carmenia          #+#    #+#             */
-/*   Updated: 2017/11/23 18:02:34 by carmenia         ###   ########.fr       */
+/*   Updated: 2017/12/04 21:19:02 by carmenia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,8 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	size_t i;
-
-	i = 0;
-	while (s[i])
+	if (s)
 	{
-		write(1, &s[i], fd);
-		i++;
+		write(fd, s, ft_strlen(s));
 	}
 }

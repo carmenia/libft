@@ -6,7 +6,7 @@
 /*   By: carmenia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/23 18:04:39 by carmenia          #+#    #+#             */
-/*   Updated: 2017/11/23 18:05:19 by carmenia         ###   ########.fr       */
+/*   Updated: 2017/12/04 21:21:35 by carmenia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,6 @@
 
 void	ft_putendl_fd(char const *s, int fd)
 {
-	
+	ft_putstr_fd((char *)s, fd);
+	write(fd, "\n", 1);
 }

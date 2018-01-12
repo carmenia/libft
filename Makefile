@@ -66,6 +66,10 @@ SRCS =	ft_atoi.c			\
 		ft_lstadd.c			\
 		ft_lstiter.c		\
 		ft_lstmap.c			\
+		ft_lstrev.c			\
+		ft_highlow_sqrt.c	\
+		ft_lstcount.c		\
+
 
 .PHONY: all clean fclean re
 

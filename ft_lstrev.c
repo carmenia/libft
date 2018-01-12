@@ -1,25 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sqrt.c                                          :+:      :+:    :+:   */
+/*   ft_lstrev.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: carmenia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/21 10:21:38 by carmenia          #+#    #+#             */
-/*   Updated: 2018/01/10 21:00:20 by carmenia         ###   ########.fr       */
+/*   Created: 2018/01/10 18:39:14 by carmenia          #+#    #+#             */
+/*   Updated: 2018/01/12 13:00:32 by carmenia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_sqrt(int n)
-{
-	int i;
+#include "libft.h"
 
-	i = 0;
-	while (i <= n / 2)
+#include "libft.h"
+
+void	ft_lstrev(t_list **alst)
+{
+	t_list	*prev;
+	t_list	*cur;
+	t_list	*next;
+
+	prev = NULL;
+	cur = *alst;
+	while (cur != NULL)
 	{
-		if (i * i == n)
-			return (i);
-		i++;
+		next = cur->next;
+		cur->next = prev;
+		prev = cur;
+		cur = next;
 	}
-	return (0);
+	*alst = prev;
 }

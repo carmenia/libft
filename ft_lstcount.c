@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sqrt.c                                          :+:      :+:    :+:   */
+/*   ft_lstcount.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: carmenia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/21 10:21:38 by carmenia          #+#    #+#             */
-/*   Updated: 2018/01/10 21:00:20 by carmenia         ###   ########.fr       */
+/*   Created: 2018/01/11 16:21:18 by carmenia          #+#    #+#             */
+/*   Updated: 2018/01/11 18:50:19 by carmenia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_sqrt(int n)
+#include "libft.h"
+
+size_t		ft_lstcount(t_list *alst)
 {
-	int i;
+	size_t	i;
 
 	i = 0;
-	while (i <= n / 2)
+	while (alst)
 	{
-		if (i * i == n)
-			return (i);
 		i++;
+		alst = alst->next;
 	}
-	return (0);
+	return (i);
 }

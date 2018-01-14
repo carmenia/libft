@@ -17,8 +17,10 @@ int		ft_highlow_sqrt(int n, char *highlow)
 	int	i;
 
 	i = 0;
-	while (i * i <= n)
+	while (i * i < n)
 		i++;
+	if (i * i == n)
+		return (i);
 	if (ft_strcmp(highlow,"high") == 0)
 		return (i);
 	else if (ft_strcmp(highlow,"low") == 0)

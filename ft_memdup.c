@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_highlow_sqrt.c                                  :+:      :+:    :+:   */
+/*   ft_memdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: carmenia <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: rmiralle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/01/10 21:02:24 by carmenia          #+#    #+#             */
-/*   Updated: 2018/01/15 12:36:01 by carmenia         ###   ########.fr       */
+/*   Created: 2017/12/04 18:17:26 by rmiralle          #+#    #+#             */
+/*   Updated: 2017/12/04 20:22:23 by rmiralle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_highlow_sqrt(int n, char *highlow)
+char	*ft_memdup(void *src, size_t n)
 {
-	int	i;
+	char	*fraiche;
+	size_t	i;
 
 	i = 0;
-	while (i * i < n)
+	if (!(fraiche = (char *)malloc(sizeof(char) * n + 1)))
+		return (NULL);
+	while (i < n)
+	{
+		fraiche[i] = ((char *)src)[i];
 		i++;
-	if (i * i == n)
-		return (i);
-	else if (ft_strcmp(highlow, "high") == 0)
-		return (i);
-	else if (ft_strcmp(highlow, "low") == 0)
-		return (i - 1);
-	return (0);
+	}
+	return (fraiche);
 }

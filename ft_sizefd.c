@@ -1,29 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_highlow_sqrt.c                                  :+:      :+:    :+:   */
+/*   ft_sizefd.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: carmenia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/01/10 21:02:24 by carmenia          #+#    #+#             */
-/*   Updated: 2018/01/15 12:36:01 by carmenia         ###   ########.fr       */
+/*   Created: 2018/01/15 12:40:17 by carmenia          #+#    #+#             */
+/*   Updated: 2018/01/15 12:41:52 by carmenia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_highlow_sqrt(int n, char *highlow)
+int		ft_sizefd(char *file)
 {
-	int	i;
+	int		size;
+	int		fd;
+	char	*buf;
 
-	i = 0;
-	while (i * i < n)
-		i++;
-	if (i * i == n)
-		return (i);
-	else if (ft_strcmp(highlow, "high") == 0)
-		return (i);
-	else if (ft_strcmp(highlow, "low") == 0)
-		return (i - 1);
-	return (0);
+	size = 0;
+	fd = open(file, O_RDONLY);
+	if (fd == -1)
+	{
+		ft_putstr("error\n");
+		return (1);
+	}
+	if (!(buf = (char *)malloc(sizeof(*buf) * 1)))
+		return (1);
+	while (read(fd, buf, 1))
+		size++;
+	if (close(fd) == -1)
+	{
+		ft_putstr("error\n");
+		return (1);
+	}
+	return (size);
 }

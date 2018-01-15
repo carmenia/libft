@@ -1,29 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_highlow_sqrt.c                                  :+:      :+:    :+:   */
+/*   ft_countword.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: carmenia <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: rmiralle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/01/10 21:02:24 by carmenia          #+#    #+#             */
-/*   Updated: 2018/01/15 12:36:01 by carmenia         ###   ########.fr       */
+/*   Created: 2017/12/06 12:52:30 by rmiralle          #+#    #+#             */
+/*   Updated: 2017/12/06 17:22:14 by rmiralle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_highlow_sqrt(int n, char *highlow)
+int		ft_countword(char *s, char c)
 {
 	int	i;
+	int	drapeau;
+	int	mot;
 
 	i = 0;
-	while (i * i < n)
+	mot = 0;
+	drapeau = 0;
+	while (s[i])
+	{
+		if (s[i] == c)
+			drapeau = 0;
+		if (s[i] != c && drapeau == 0)
+		{
+			mot++;
+			drapeau = 1;
+		}
 		i++;
-	if (i * i == n)
-		return (i);
-	else if (ft_strcmp(highlow, "high") == 0)
-		return (i);
-	else if (ft_strcmp(highlow, "low") == 0)
-		return (i - 1);
-	return (0);
+	}
+	return (mot);
 }

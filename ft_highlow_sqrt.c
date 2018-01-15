@@ -20,6 +20,11 @@ int		ft_highlow_sqrt(int n, char *highlow)
 	while (i * i < n)
 		i++;
 	if (i * i == n)
+<<<<<<< HEAD
+=======
+		return (i);
+	if (ft_strcmp(highlow,"high") == 0)
+>>>>>>> dd2ecf501edff93e9de06149c8b8b1ac40a2c125
 		return (i);
 	else if (ft_strcmp(highlow, "high") == 0)
 		return (i);

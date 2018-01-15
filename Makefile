@@ -86,7 +86,8 @@ $(NAME): $(SRCO)
 	ranlib $(NAME)
 
 %.o: %.c
-	gcc -Wall -Wextra -Werror -c $(INCL) $^
+	@printf "\rgcc -c -Wall -Wextra -Werror -o $@ $^                    "
+	@gcc -c -Wall -Wextra -Werror -o $@ $^
 
 clean: 
 	rm -f $(SRCO)

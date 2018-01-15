@@ -6,7 +6,7 @@
 /*   By: carmenia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/15 12:43:07 by carmenia          #+#    #+#             */
-/*   Updated: 2018/01/15 12:44:35 by carmenia         ###   ########.fr       */
+/*   Updated: 2018/01/15 15:30:40 by carmenia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,7 @@ char	*ft_strfd(char *file)
 		return (NULL);
 	fd = open(file, O_RDONLY);
 	if (fd == -1)
-	{
-		ft_putstr("error\n");
 		return (NULL);
-	}
 	if (size == 0)
 		return (0);
 	if (!(str = (char *)malloc(sizeof(*str) * (size))))
@@ -33,9 +30,6 @@ char	*ft_strfd(char *file)
 	read(fd, str, size);
 	str[size] = '\0';
 	if (close(fd) == -1)
-	{
-		ft_putstr("error\n");
 		return (NULL);
-	}
 	return (str);
 }

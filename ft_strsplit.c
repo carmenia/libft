@@ -3,18 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: carmenia <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: apoque <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/23 17:45:49 by carmenia          #+#    #+#             */
-/*   Updated: 2017/12/04 21:31:18 by carmenia         ###   ########.fr       */
+/*   Created: 2017/11/08 19:16:55 by apoque            #+#    #+#             */
+/*   Updated: 2017/11/16 11:17:36 by apoque           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
- ** pas encore reussi
-*/
-
 #include "libft.h"
+#include <stdlib.h>
 
 static int			ft_word_count(char const *s, char c)
 {

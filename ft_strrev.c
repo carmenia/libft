@@ -1,36 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_countword.c                                     :+:      :+:    :+:   */
+/*   ft_strrev.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rmiralle <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: apoque <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/06 12:52:30 by rmiralle          #+#    #+#             */
-/*   Updated: 2017/12/06 17:22:14 by rmiralle         ###   ########.fr       */
+/*   Created: 2018/03/13 16:07:00 by apoque            #+#    #+#             */
+/*   Updated: 2018/03/13 16:07:02 by apoque           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_countword(char *s, char c)
+char	*ft_strrev(char *str)
 {
-	int	i;
-	int	drapeau;
-	int	mot;
+	size_t	i;
+	size_t	j;
+	char	tmp;
 
 	i = 0;
-	mot = 0;
-	drapeau = 0;
-	while (s[i])
+	j = ft_strlen(str) - 1;
+	while (i < j)
 	{
-		if (s[i] == c)
-			drapeau = 0;
-		if (s[i] != c && drapeau == 0)
-		{
-			mot++;
-			drapeau = 1;
-		}
+		tmp = (str)[i];
+		(str)[i] = (str)[j];
+		(str)[j] = tmp;
 		i++;
+		j--;
 	}
-	return (mot);
+	return (str);
 }

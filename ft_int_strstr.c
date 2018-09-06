@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_highlow_sqrt.c                                  :+:      :+:    :+:   */
+/*   ft_int_strstr.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: carmenia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/01/10 21:02:24 by carmenia          #+#    #+#             */
-/*   Updated: 2018/01/15 12:36:01 by carmenia         ###   ########.fr       */
+/*   Created: 2018/08/21 20:54:53 by carmenia          #+#    #+#             */
+/*   Updated: 2018/08/21 21:23:00 by carmenia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_highlow_sqrt(int n, char *highlow)
+int	ft_int_strstr(const char *src, const char *find)
 {
-	int	i;
+	size_t	len;
 
-	i = 0;
-	while (i * i < n)
-		i++;
-	if (i * i == n)
-		return (i);
-	else if (ft_strcmp(highlow, "high") == 0)
-		return (i);
-	else if (ft_strcmp(highlow, "low") == 0)
-		return (i - 1);
+	len = ft_strlen(find);
+	if (*find == '\0' || !find)
+		return (0);
+	while (*src)
+	{
+		if (ft_strncmp(src, find, len) == 0)
+			return (1);
+		src++;
+	}
 	return (0);
 }

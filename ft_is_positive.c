@@ -1,30 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_factorial.c                                     :+:      :+:    :+:   */
+/*   ft_is_positive.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: carmenia <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: apoque <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/21 10:40:17 by carmenia          #+#    #+#             */
-/*   Updated: 2017/11/21 16:05:29 by carmenia         ###   ########.fr       */
+/*   Created: 2017/11/18 15:23:36 by apoque            #+#    #+#             */
+/*   Updated: 2017/11/18 15:24:00 by apoque           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-size_t	ft_factorial(size_t n)
+int	ft_is_positive(int nb)
 {
-	int	i;
-
-	i = 1;
-	if (n >= 13)
-		return (0);
-	if (n == 0 || n == 1)
+	if (nb >= 0)
 		return (1);
-	while (n > 1)
-	{
-		i = n * i;
-		n--;
-	}
-	return (i);
+	else
+		return (0);
 }

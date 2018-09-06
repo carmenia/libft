@@ -3,23 +3,34 @@
 /*                                                        :::      ::::::::   */
 /*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: carmenia <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: apoque <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/21 10:21:38 by carmenia          #+#    #+#             */
-/*   Updated: 2018/01/10 21:00:20 by carmenia         ###   ########.fr       */
+/*   Created: 2017/11/18 15:21:34 by apoque            #+#    #+#             */
+/*   Updated: 2017/11/18 15:22:07 by apoque           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_sqrt(int n)
+int	ft_sqrt(int nb)
 {
-	int i;
+	int	i;
+	int	j;
 
-	i = 0;
-	while (i <= n / 2)
+	i = 1;
+	j = 1;
+	if (nb <= 0)
+		return (0);
+	else
 	{
-		if (i * i == n)
-			return (i);
-		i++;
+		while (i <= nb)
+		{
+			if (i == nb)
+				return (j);
+			else
+			{
+				i = i + (2 * j + 1);
+				j++;
+			}
+		}
+		return (0);
 	}
-	return (0);
 }

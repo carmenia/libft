@@ -3,36 +3,40 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: carmenia <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: apoque <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/19 13:54:14 by carmenia          #+#    #+#             */
-/*   Updated: 2017/11/21 20:30:55 by carmenia         ###   ########.fr       */
+/*   Created: 2017/11/08 19:10:07 by apoque            #+#    #+#             */
+/*   Updated: 2017/11/16 11:00:39 by apoque           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *des, const void *src, size_t n)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	unsigned char	*des1;
-	unsigned char	*src1;
-	size_t			i;
+	size_t	i;
+	char	*dst_char;
+	char	*src_char;
 
-	des1 = (unsigned char *)des;
-	src1 = (unsigned char *)src;
-	i = 0;
-	if (des < src)
+	dst_char = (char *)dst;
+	src_char = (char *)src;
+	if (src <= dst && dst <= src + len)
 	{
-		while (i < n)
+		i = len;
+		while (i > 0)
 		{
-			des1[i] = src1[i];
-			i++;
+			dst_char[i - 1] = src_char[i - 1];
+			i--;
 		}
 	}
 	else
 	{
-		while (n-- > 0)
-			des1[n] = src1[n];
+		i = 0;
+		while (i < len)
+		{
+			dst_char[i] = src_char[i];
+			i++;
+		}
 	}
-	return (des);
+	return (dst);
 }

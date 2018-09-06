@@ -1,20 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap_str.c                                      :+:      :+:    :+:   */
+/*   ft_factoriel.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: carmenia <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: apoque <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/21 10:37:59 by carmenia          #+#    #+#             */
-/*   Updated: 2017/11/21 15:09:48 by carmenia         ###   ########.fr       */
+/*   Created: 2017/11/18 15:20:58 by apoque            #+#    #+#             */
+/*   Updated: 2017/11/18 15:41:09 by apoque           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_swap_str(char **a, char **b)
+int	ft_factoriel(int nb)
 {
-	char *c;
+	int	res;
 
-	c = *a;
-	*a = *b;
-	*b = c;
+	res = 1;
+	if (nb == 0)
+		return (1);
+	if (nb < 0 || nb > 12)
+		return (0);
+	else
+	{
+		while (nb > 0)
+		{
+			res = res * nb;
+			nb--;
+		}
+		return (res);
+	}
 }
